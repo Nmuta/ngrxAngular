@@ -1,0 +1,13 @@
+<div>
+    City name: {{ city }}
+    <br>
+    <br>
+    popular gems in {{  (stuff | async ).stateName }}
+    <ul>
+      <li *ngFor="let gem of (stuff | async ).gemCollection">
+        {{gem}}
+      </li>
+    </ul>
+   
+   
+   </div>
