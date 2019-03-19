@@ -15,7 +15,7 @@ export class BoulderComponent implements OnInit {
   constructor(private store:Store<{}>) { }
 
   ngOnInit() {
-    this.stuff = this.store.select("gemReducer"); 
+    this.stuff = this.store.select("mainStore"); // the selector 'mainStore' is defined in app.module.ts
   }
 
 }

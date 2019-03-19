@@ -19,7 +19,7 @@ import { gemReducer } from './reducers/gem-reducer';
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    StoreModule.forRoot({gemReducer: gemReducer})
+    StoreModule.forRoot({mainStore: gemReducer})
 
   ],
   providers: [],

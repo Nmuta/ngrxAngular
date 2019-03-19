@@ -16,8 +16,8 @@ export class DenverComponent implements OnInit {
 
 
   ngOnInit() {
-    // the names below, gem_list and name_of_state, tie into unique identifiers in app.module.ts,  
-    this.stuff = this.store.select('gemReducer'); // these names tie into store se
+      
+    this.stuff = this.store.select('mainStore'); // the selector 'mainStore' is defined in app.module.ts
   }
 
 }
