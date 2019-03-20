@@ -17,6 +17,12 @@ export function gemReducer(state=initialState, action: gemActions.gemActions){
         return{
             ...state
         }
+
+        case "DELETE":
+        return{
+            ...state,
+            gemCollection:  state.gemCollection.filter((x:string,i:number) => i!==action.payload)
+        }
       
         default:
           return {

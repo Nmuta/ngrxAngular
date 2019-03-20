@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 .city_box {
-    width: 200px;
+    width: 400px;
     height: 200px;
     float: left;
     border: 1px solid purple;
@@ -10,6 +10,12 @@
         background-color: green;
         color:white;
         border-radius: 3px;
+    }
+    button.db{
+        background-color: red;
+    }
+    button.eb{
+        background-color: lightblue;
     }
     .city_header{
         color: purple;

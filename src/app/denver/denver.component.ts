@@ -29,4 +29,12 @@ export class DenverComponent implements OnInit {
     this.store.dispatch(new gemActions.addGem(userInput));
   }
 
+  editGem(i:number){
+    alert("editing"+i); 
+  }
+
+  deleteGem(i:number){
+    this.store.dispatch(new gemActions.deleteGem(i));
+  }
+
 }
