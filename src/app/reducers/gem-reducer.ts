@@ -11,7 +11,7 @@ export function gemReducer(state=initialState, action: gemActions.gemActions){
         case "ADD": 
         return {
             ...state,
-            gemCollection: action.payload
+            gemCollection: [...state.gemCollection, action.payload]
         }
         case "EDIT":
         return{

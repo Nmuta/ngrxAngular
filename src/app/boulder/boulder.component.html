@@ -1,8 +1,5 @@
-<div>
-    City name: {{ city }}
-    <br>
-    <br>
-    popular gems in {{  (stuff | async ).stateName }}
+<div class="city_box">
+  <div class="city_header">{{ city }} ,  {{ (stuff | async ).stateName }} </div>
     <ul>
       <li *ngFor="let gem of (stuff | async ).gemCollection">
         {{gem}}

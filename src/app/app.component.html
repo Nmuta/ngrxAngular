@@ -1,8 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<h1>Ngrx store</h1>
+<h5>Ngrx store</h5>
 
-<app-nav></app-nav>
+<section>
+    The first two boxes both subscribe to the same store. 
+    In reactive programming, since we have an active subscripion to the store, when we add an element 
+    to that store, it instantly appears in both components. This is a much more elegant way to have 
+    components communicate with each other than using event emitters. 
+</section>
+
+<app-denver></app-denver>
+<app-boulder></app-boulder>
 
 
-
-<router-outlet></router-outlet>
+<!--router-outlet></router-outlet-->

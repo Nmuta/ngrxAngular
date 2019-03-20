@@ -1,13 +1,17 @@
-<div>
- City name: {{ city }}
- <br>
- <br>
- Popular gems in {{  (stuff | async ).stateName }}
+<div class="city_box">
+  <!-- city is pulled from the component but stateName is being pulled from the store. -->
+ <div class="city_header">{{ city }} ,  {{ (stuff | async ).stateName }} </div>
  <ul>
    <li *ngFor="let gem of (stuff | async ).gemCollection">
      {{gem}}
    </li>
  </ul>
+
+ <div>
+   <button (click)="addGem()">add new</button>
+   <input type="text" #newGem>
+ </div>
+
 
 
 </div>

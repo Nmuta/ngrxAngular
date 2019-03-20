@@ -5,7 +5,7 @@ const EDIT_GEM:string = "EDIT";
 
 export class addGem implements Action{
   readonly type = ADD_GEM; 
-  payload:string = "the new gem name"; 
+  constructor(public payload:string){}
 }
 
 export class editGem implements Action{
