@@ -32,9 +32,9 @@ export class DenverComponent implements OnInit {
 
   editGem(index:number){
     let targetText = <HTMLInputElement>(document.getElementById("gem"+index));
-    let val:any = targetText ? targetText.value : ""; 
+    let val:any = targetText ? targetText.value : "";
 
-    let bundle:EditedItem = new EditedItem(index,val); 
+    let bundle:EditedItem = new EditedItem(index,val);
     this.store.dispatch(new gemActions.editGem(bundle));
   }
 
