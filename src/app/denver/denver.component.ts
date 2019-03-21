@@ -3,6 +3,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import * as gemActions from '../actions/gemActions'; 
 import { getParentInjectorIndex } from '@angular/core/src/render3/util';
+import { EditedItem } from '../editedItem.model';  
 
 @Component({
   selector: 'app-denver',
@@ -29,8 +30,12 @@ export class DenverComponent implements OnInit {
     this.store.dispatch(new gemActions.addGem(userInput));
   }
 
-  editGem(i:number){
-    alert("editing"+i); 
+  editGem(index:number){
+    let targetText = <HTMLInputElement>(document.getElementById("gem"+index));
+    let val:any = targetText ? targetText.value : ""; 
+
+    let bundle:EditedItem = new EditedItem(index,val); 
+    this.store.dispatch(new gemActions.editGem(bundle));
   }
 
   deleteGem(i:number){

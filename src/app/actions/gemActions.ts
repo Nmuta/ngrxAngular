@@ -1,4 +1,10 @@
 import { Action } from '@ngrx/store';
+import { EditedItem } from '../editedItem.model';  
+
+interface gemObject{
+  index: number,
+  newValue: string
+}
 
 const ADD_GEM:string = "ADD"; 
 const EDIT_GEM:string = "EDIT"; 
@@ -11,7 +17,7 @@ export class addGem implements Action{
 
 export class editGem implements Action{
     readonly type = EDIT_GEM; 
-    payload:number = 4;
+    constructor(public payload:EditedItem){}
   }
 
 export class deleteGem implements Action{
@@ -19,4 +25,4 @@ export class deleteGem implements Action{
     constructor(public payload:number){}
   }
 
-export type gemActions = addGem; 
+export type gemActions =  addGem | editGem | deleteGem ; 

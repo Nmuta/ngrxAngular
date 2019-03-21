@@ -3,13 +3,13 @@
  <div class="city_header">{{ city }} ,  {{ (stuff | async ).stateName }} </div>
  <ul>
    <li *ngFor="let gem of (stuff | async ).gemCollection; let i= index">
-     <input value={{gem}} id="gem{{i}}">  <button class="eb" (click)="editGem(i)">edit</button> | <button class="db" (click)="deleteGem(i)">delete</button>   
+     <input value={{gem}} id="gem{{i}}">  <button class="eb" (click)="editGem(i)">update</button> | <button class="db" (click)="deleteGem(i)">delete</button>   
 
    </li>
  </ul>
 
  <div>
-   <button (click)="addGem()">add new</button>
+   <button (click)="addGem()">add new > </button>
    <input type="text" #newGem>
  </div>
 

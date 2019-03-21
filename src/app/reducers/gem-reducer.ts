@@ -15,7 +15,8 @@ export function gemReducer(state=initialState, action: gemActions.gemActions){
         }
         case "EDIT":
         return{
-            ...state
+            ...state, 
+            gemCollection: state.gemCollection.map((x,i)=> i===action.payload.index? action.payload.newValue : x )
         }
 
         case "DELETE":
